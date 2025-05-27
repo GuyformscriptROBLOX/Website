@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: key-api
+    env: python
+    buildCommand: ""
+    startCommand: "python main.py"
+    staticPublishPath: public
