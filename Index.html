@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>API Key Generator</title>
+  <title>Key Generator</title>
   <style>
     body {
       margin: 0;
@@ -23,58 +23,13 @@
       border-radius: 10px;
       box-shadow: 0 0 20px rgba(0,0,0,0.5);
     }
-    button {
-      margin-top: 20px;
-      background-color: #6b5bff;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .output {
-      margin-top: 20px;
-      background-color: #1b1b2b;
-      padding: 10px;
-      border-radius: 5px;
-      font-family: monospace;
-      word-break: break-all;
-    }
-    code {
-      color: #a3d3ff;
-    }
-    .legend {
-      text-align: left;
-      margin-top: 20px;
-    }
-    .legend p {
-      margin: 4px 0;
-    }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>API Key Generator</h1>
-    <p>Generate secure API keys with 24-hour expiration</p>
-    <button onclick="generateKey()">+ Generate API Key</button>
-    <div class="output" id="keyOutput"></div>
-    <div class="legend">
-      <h3>API Usage Example</h3>
-      <p><strong>Validation Endpoint:</strong></p>
-      <code>GET /api/check?key=YOUR_API_KEY</code>
-      <p><strong>Response:</strong></p>
-      <p style="color: #00ff88;">VALID - Key is active</p>
-      <p style="color: #ffcc00;">EXPIRED - Key has expired</p>
-      <p style="color: #ff4444;">INVALID - Key doesn't exist</p>
+    <h1>Key Generator</h1>
+    <p>Your key with 24-hour expiration</p>
+    <button onclick>RJ2VUMYci1MX</button>
     </div>
-  </div>
-  <script>
-    async function generateKey() {
-      const response = await fetch('/api/generate');
-      const data = await response.json();
-      document.getElementById('keyOutput').innerText = data.key;
-    }
-  </script>
 </body>
 </html>
